@@ -57,3 +57,18 @@ const timeAgo = function (t1, t2) {
     }
   }
 }
+
+const timeAgo = function (t1, t2) {
+  const time1 = new Date(t1);
+  const time2 = new Date(t2);
+  if (isNaN(time1.getTime()) || isNaN(time2.getTime())) return;
+  const diffTime = time1.getTime() - time2.getTime();
+  if (Math.abs(diffTime) < 10 * 1000 && diffTime <= 0) return '刚刚';
+  const obj = { '年': 'getFullYear', '个月': 'getMonth', '天': 'getDate', '小时': 'getHours', '分钟': 'getMinutes', '秒': 'getSeconds' }
+  for (const key in obj) {
+    const diff = time1[obj[key]]() - time2[obj[key]]();
+    if (diff != 0) {
+      return `${Math.abs(diff)}${key}${diff > 0 ? '后' : '前'}`;
+    }
+  }
+}
