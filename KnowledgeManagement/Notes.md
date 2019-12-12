@@ -51,3 +51,32 @@ Use a temp variable to store the value.
 ### Vue $scopedSlots
 
 If bind scope to slot, use this to instead of $slots.
+
+### Vue mixins
+
+```js
+// Input.vue
+<script>
+import { Input } from 'element-ui';
+
+export default {
+  mixins: [Input],
+  props: {
+    size: {
+      default: 'mini',
+    },
+  },
+  mounted() {
+    this.$on('input', (e) => {
+      console.log(e);
+    });
+  },
+};
+</script>
+```
+
+If use this way to set default props to a component, also can use below way to listener to event.
+
+```html
+<input @input="input">
+```
