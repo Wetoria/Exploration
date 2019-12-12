@@ -47,3 +47,7 @@ class Test {
 ```
 
 Use a temp variable to store the value.
+
+### Vue $scopedSlots
+
+If bind scope to slot, use this to instead of $slots.
