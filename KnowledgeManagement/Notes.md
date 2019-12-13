@@ -80,3 +80,14 @@ If use this way to set default props to a component, also can use below way to l
 ```html
 <input @input="input">
 ```
+
+## 2019-12-13
+
+### Excel 条件格式
+```
+// $ means absolute path
+// $A$1 $A1 A$1 A1
+=IF(AND(OR(IF($K3<>"", 1, 0), IF($L3<>"",1,0)), IF(R3="",1,0)),1,0)
+```
+
+
