@@ -121,3 +121,10 @@ Use `~` to resolve path in `<template>`. Like this:
 ```html
 <img src="~p@/img.png" />
 ```
+
+
+## 2019-12-18
+
+### VS Code
+
+Use `cmd+enter` to create a new line below, or use `cmd+shift+enter` to create a new line above.
