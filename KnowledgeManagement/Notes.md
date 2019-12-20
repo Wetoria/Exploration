@@ -128,3 +128,11 @@ Use `~` to resolve path in `<template>`. Like this:
 ### VS Code
 
 Use `cmd+enter` to create a new line below, or use `cmd+shift+enter` to create a new line above.
+
+## 2019-12-20
+
+### Mac DNS Lookup
+
+Open `alfred` or `spotlight` to search `Network tools`, select `lookup`, enter the site to find the ip.
+
+Or use `nslookup` in `terminal`.
