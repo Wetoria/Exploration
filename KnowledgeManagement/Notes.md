@@ -136,3 +136,22 @@ Use `cmd+enter` to create a new line below, or use `cmd+shift+enter` to create a
 Open `alfred` or `spotlight` to search `Network tools`, select `lookup`, enter the site to find the ip.
 
 Or use `nslookup` in `terminal`.
+
+
+## 2019-12-21
+
+### Webpack `require.context`
+
+第三个参数用来去匹配获取的路径，是否满足正则条件。该方法获取的路径如下：
+
+```
+./FileUtils.js
+./StringUtils.js
+./Test/T/index.js
+./Test/index.js
+./Test/router/index.js
+./index.js
+./init.js
+```
+
+`Webpack` 会用正则去跟这些路径做比较，满足条件的就会被留下来。
