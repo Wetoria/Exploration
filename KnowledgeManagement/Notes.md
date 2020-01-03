@@ -2,6 +2,10 @@
 
 My own notes, recorded when I am exploring something.
 
+## 2020-01-03
+`JSON.stringify` 序列化的对象不能包括自己本身，否则会报错。
+
+
 ## 2020-01-02
 
 ### Vue
