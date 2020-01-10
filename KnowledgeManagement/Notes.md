@@ -2,6 +2,10 @@
 
 My own notes, recorded when I am exploring something.
 
+## 2020-01-10
+附件的deleted字段都为true了，相当于需要保存的数据为空，这个时候没有做判断.
+
+
 ## 2020-01-03
 `JSON.stringify` 序列化的对象不能包括自己本身，否则会报错。
 
