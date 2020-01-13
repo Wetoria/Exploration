@@ -54,6 +54,11 @@ import '../public/iconfont/iconfont.js';
 export default {
   mounted() {
     console.log(this.$router, this.$route, this.$page, this.$site);
+    this.$site.pages.sort((a, b) => {
+      const dateA = new Date(a.lastUpdated);
+      const dateB = new Date(b.lastUpdated);
+      return dateB.getTime() - dateA.getTime();
+    });
   },
   methods: {
     getDate(time) {
