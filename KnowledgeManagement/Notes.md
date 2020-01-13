@@ -2,6 +2,15 @@
 
 My own notes, recorded when I am exploring something.
 
+## 2020-01-13
+
+### VuePress
+在styl中使用绝对路径来处理图片路径问题，暂时没去找其他的解决方案了。
+```css
+background-image: url('/images/bg4.jpg')
+```
+
+
 ## 2020-01-10
 
 ### Experience

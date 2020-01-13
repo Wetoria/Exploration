@@ -1,3 +1,6 @@
+---
+tags: ['Test', 'T2']
+---
 # Hello VuePress!
 
 ## Test <sup>[t](#1)</sup>

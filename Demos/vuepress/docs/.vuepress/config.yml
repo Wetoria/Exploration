@@ -1,7 +1,13 @@
 title: Wetoria
-description: A home about Wetoria
+description: Fake it until become it
 markdown:
   lineNumbers: true
 
 themeConfig: 
   displayAllHeaders: true
+  lastUpdated: 'Last Updated'
+
+configureWebpack:
+  resolve:
+    alias:
+      '@public': './public'
