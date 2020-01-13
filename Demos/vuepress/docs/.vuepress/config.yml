@@ -1,0 +1,7 @@
+title: Wetoria
+description: A home about Wetoria
+markdown:
+  lineNumbers: true
+
+themeConfig: 
+  displayAllHeaders: true
