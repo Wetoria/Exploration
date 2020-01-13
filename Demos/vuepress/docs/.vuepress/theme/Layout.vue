@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="user-info-main">
+    <div class="user-info-main" v-if="isHome || isPostDetail">
       <div class="info-container">
         <a href="/" title="前往 Wetoria 的主页">
           <img src="/portrait.jpg" />
@@ -18,13 +18,15 @@
             </ul>
           </div>
           <div class="outside">
-            <v-icon icon-class="v-github" />
+            <a :href="$site.themeConfig.github" target="_blank">
+              <v-icon icon-class="v-github" />
+            </a>
           </div>
         </div>
       </div>
       <div class="cover"></div>
     </div>
-    <div class="post-container">
+    <div class="post-container" v-if="isHome">
       <div class="post-list">
         <div class="post-item" v-for="page in $site.pages" :key="page.key">
           <h2 class="post-title">
@@ -59,6 +61,14 @@ export default {
       const dateB = new Date(b.lastUpdated);
       return dateB.getTime() - dateA.getTime();
     });
+  },
+  computed: {
+    isHome() {
+      return this.$route.path === '/';
+    },
+    isPostDetail() {
+      return this.$route.path.includes('posts');
+    },
   },
   methods: {
     getDate(time) {

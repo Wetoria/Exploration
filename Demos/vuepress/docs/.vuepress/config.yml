@@ -6,6 +6,7 @@ markdown:
 themeConfig: 
   displayAllHeaders: true
   lastUpdated: 'Last Updated'
+  github: https://github.com/Wetoria
 
 configureWebpack:
   resolve:
