@@ -2,6 +2,12 @@
 
 My own notes, recorded when I am exploring something.
 
+## 2020-01-15
+
+### MacOS 逆向
+如何在现有项目中[`pod install`](https://stackoverflow.com/questions/20755044/how-to-install-cocoapods)。
+
+
 ## 2020-01-13
 
 ### VuePress
