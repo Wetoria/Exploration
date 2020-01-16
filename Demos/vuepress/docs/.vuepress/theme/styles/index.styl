@@ -24,8 +24,10 @@ a
   fill: currentColor
   overflow: hidden
 
-.main
+.container
   display: flex
+  height: 100%
+  width: 100%
 
 .user-info-main
   width: 24%
@@ -104,10 +106,12 @@ a
     left: 0px
     background-color: rgba(0, 0, 0, 0.3)
 
-.post-container
+.main
+  flex: 1
   height: 100%
   overflow-y: auto
-  flex: 1
+
+.post-container
   .post-list,
   .post-detail
     padding: 50px 10%
@@ -154,3 +158,15 @@ a
       padding-bottom: 1.2em
     h1, h2, h3, h4, h5, h6
       padding-top: 1.2em
+
+.footer
+  width: 100%
+  flex: 1
+  text-align: center
+  span
+    border-top: 2px solid #ddd
+    width: 80%
+    display: inline-block
+    padding: 30px
+    font-size: 0.7em
+    color: #b3b3b3
