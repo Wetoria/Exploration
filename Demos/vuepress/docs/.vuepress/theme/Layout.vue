@@ -26,26 +26,28 @@
       </div>
       <div class="cover"></div>
     </div>
-    <div class="post-container" v-if="isHome">
-      <div class="post-list">
-        <div class="post-item" v-for="page in $site.pages" :key="page.key">
+    <div class="post-container">
+      <div class="post-list" v-if="isHome">
+        <div class="post-item" v-for="(page, index) in posts" :key="page.key">
           <h2 class="post-title">
             <a :href="page.regularPath">{{ page.title }}</a>
           </h2>
           <p class="post-excerpt" v-if="page.excerpt" v-html="page.excerpt"></p>
           <div class="post-meta">
             <time>{{ getDate(page.lastUpdated) }}</time>
-             • 
             <span class="tags" v-if="shouldRenderTags(page)">
-              于 
+             • 于 
               <span class="tag" v-for="tag in page.frontmatter.tags">
                 <a class="tag-link">{{tag}}</a>
               </span>
             </span>
             <a :href="page.regularPath" class="btn-continue">继续阅读</a>
           </div>
-          <hr class="post-divider" />
+          <hr class="post-divider" v-if="index !== posts.length - 1" />
         </div>
+      </div>
+      <div class="post-detail" v-if="isPostDetail">
+        <Content />
       </div>
     </div>
   </div>
@@ -68,6 +70,9 @@ export default {
     },
     isPostDetail() {
       return this.$route.path.includes('posts');
+    },
+    posts() {
+      return this.$site.pages.filter(item => item.path !== '/');
     },
   },
   methods: {
