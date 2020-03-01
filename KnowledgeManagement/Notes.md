@@ -2,6 +2,12 @@
 
 My own notes, recorded when I am exploring something.
 
+## 2020-03-01
+for...in循环的是key，for...of循环的是value，对象不能使用for...of进行遍历
+
+使用for...in遍历数组时，如果有自定义key，自定义key也会遍历，如果用for...of，只会遍历数组中的value，而不会遍历出自定义key的值
+
+
 ## 2020-01-15
 
 ### MacOS 逆向
