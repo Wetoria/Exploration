@@ -1,0 +1,25 @@
+<div id="progress">test</div>
+
+<script>
+  let i = 0;
+  function count() {
+    // setTimeout(function() {
+    // for (let i = 0; i < 1e5; i++) {
+    //   i++;
+    //   progress.innerHTML = i;
+    // }
+    // }, 1000)
+    // 做繁重的任务的一部分 (*)
+    do {
+      i++;
+      progress.innerHTML = i;
+    } while (i % 1e3 != 0);
+
+    if (i < 1e6) {
+      // setTimeout(count);
+      queueMicrotask(count);
+    }
+  }
+
+  count();
+</script>
