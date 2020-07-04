@@ -35,7 +35,7 @@ function Vue (options) {
 在我们执行 `new Vue` 时，实际上是调用如上构造函数，整个方法做了两件事，1.检验是否通过 `new` 调用，2.调用 `_init` 方法进行初始化。
 
 
-在该文件中还有如下五个方法的调用，用于对 Vue 原型进行扩展，方法里大概做了什么见方法后的注释。其中需要注意的是 `initMixin`、`lifecycleMixin` 和 `renderMixin` 三个方法是在数据驱动这个流程中需要注意的。
+在该文件中还有如下五个方法的调用，用于对 Vue 原型进行扩展，方法里大概做了什么见方法后的注释。其中 `initMixin`、`lifecycleMixin` 和 `renderMixin` 三个方法是在数据驱动这个流程中需要注意的。
 
 ```js
 initMixin(Vue) // 挂载_init方法
@@ -47,7 +47,7 @@ renderMixin(Vue) // 挂载渲染相关的帮助函数，$nextTick/_render等方�
 
 ## `_init` 方法
 
-在 `_init` 方法中，做了一些初始化操作，包括合并 `options` 参数、初始化声明周期、事件、`render` 函数等。因为整个 `state` 的初始化是在 `beforeCreate` 钩子之后执行的，这也是为什么 `data` 在 `beforeCreate` 钩子函数中不能获取，在 `created` 钩子函数中可以使用的原因。
+在 `_init` 方法中，做了一些初始化操作，包括合并 `options` 参数、初始化生命周期、事件、`render` 函数等。因为整个 `state` 的初始化是在 `beforeCreate` 钩子之后执行的，这也是为什么 `data` 在 `beforeCreate` 钩子函数中不能获取，在 `created` 钩子函数中可以使用的原因。
 
 ```js
 Vue.prototype._init = function (options?: Object) {
@@ -461,7 +461,9 @@ function createElm (
     insert(parentElm, vnode.elm, refElm)
   }
 }
+```
 
+```js
 function createChildren (vnode, children, insertedVnodeQueue) {
   if (Array.isArray(children)) {
     if (process.env.NODE_ENV !== 'production') {
@@ -474,7 +476,9 @@ function createChildren (vnode, children, insertedVnodeQueue) {
     nodeOps.appendChild(vnode.elm, nodeOps.createTextNode(String(vnode.text)))
   }
 }
+```
 
+```js
 function insert (parent, elm, ref) {
   if (isDef(parent)) {
     if (isDef(ref)) {
