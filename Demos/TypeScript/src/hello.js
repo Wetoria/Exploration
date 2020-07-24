@@ -24,3 +24,20 @@ function reverse(x) {
 }
 var p = { name: 'test' };
 console.log(p.age);
+var tom = {
+    name: 'Tom',
+    run: function () { console.log('run'); }
+};
+var animal = tom;
+// animal.run();
+// (tom as Animal).run()
+var foo_d_1 = require("../types/foo.d");
+console.log(foo_d_1.foo.name);
+foo_d_1.foo.bar.baz();
+var Directions;
+(function (Directions) {
+    Directions[Directions["Up"] = 0] = "Up";
+    Directions[Directions["Down"] = 1] = "Down";
+})(Directions || (Directions = {}));
+// const { Up, Down } = Directions;
+var d = [Up, Down];

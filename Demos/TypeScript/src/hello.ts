@@ -32,7 +32,7 @@ function reverse(x: number | string): number | string {
     }
 }
 
-import { Person } from './test';
+import { Person } from './test'; 
 
 interface Test {
   age: number,
@@ -41,3 +41,38 @@ interface Test {
 let p: Person = { name: 'test' };
 
 console.log(((p as any) as Test).age);
+
+
+interface Animal {
+    name: string;
+}
+interface Cat {
+    name: string;
+    run(): void;
+}
+
+let tom: Cat = {
+    name: 'Tom',
+    run: () => { console.log('run') }
+};
+let animal: Animal = tom;
+
+// animal.run();
+
+// (tom as Animal).run()
+
+
+import { foo } from '../types/foo.d';
+
+console.log(foo.name);
+foo.bar.baz();
+
+
+enum Directions {
+    Up,
+    Down,
+}
+
+const { Up, Down } = Directions;
+
+let d = [Up, Down];
