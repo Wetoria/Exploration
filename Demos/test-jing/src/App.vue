@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SelectTree from './SkuForm2';
+import SelectTree from './manageGood';
 
 export default {
   components: {

@@ -65,5 +65,7 @@ module.exports = {
     'vue/valid-v-model': 0,
     'linebreak-style': [0, 'error', 'windows'], //允许windows开发环境
     'import/no-cycle': 0,
+    'camelcase': 0,
+    'no-unused-vars': 0,
   },
 };
