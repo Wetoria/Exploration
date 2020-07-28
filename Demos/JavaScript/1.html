@@ -1,4 +1,4 @@
-<div id="progress">test</div>
+<!-- <div id="progress">test</div>
 
 <script>
   let i = 0;
@@ -22,4 +22,26 @@
   }
 
   count();
+</script> -->
+
+<html>
+  <script>
+    // function test() {
+    //   console.log('1111')
+    // }
+  </script>
+
+<body>
+
+  <form action="/example/html/form_action.asp" method="get" onsubmit="console.log(test, window.test, window.ttt, test == window.ttt, test === window.ttt); return test()">
+    First name: <input type="text" name="fname" id="t1" /><br />
+    Last name: <input type="text" name="lname" /><br />
+    <button type="submit" value="Submit" id="test">Submit</button>
+    <button type="reset" value="Reset" id="t2">Reset</button>
+  </form>
+  <button onclick="test()">test</button>
+  <button onclick="test()" id="b1">test</button>
+</body>
+<script>
 </script>
+</html>
