@@ -31,13 +31,14 @@ var tom = {
 var animal = tom;
 // animal.run();
 // (tom as Animal).run()
-var foo_d_1 = require("../types/foo.d");
-console.log(foo_d_1.foo.name);
-foo_d_1.foo.bar.baz();
+var foo_1 = require("../types/foo");
+console.log(foo_1.foo.name);
+foo_1.foo.bar.baz();
 var Directions;
 (function (Directions) {
     Directions[Directions["Up"] = 0] = "Up";
     Directions[Directions["Down"] = 1] = "Down";
 })(Directions || (Directions = {}));
-// const { Up, Down } = Directions;
+var Up = Directions.Up, Down = Directions.Down;
 var d = [Up, Down];
+var test = <Cat></>;

@@ -62,7 +62,7 @@ let animal: Animal = tom;
 // (tom as Animal).run()
 
 
-import { foo } from '../types/foo.d';
+import { foo } from '../types/foo';
 
 console.log(foo.name);
 foo.bar.baz();
@@ -76,3 +76,6 @@ enum Directions {
 const { Up, Down } = Directions;
 
 let d = [Up, Down];
+
+
+let test = <Cat>{}
